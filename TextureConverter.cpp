@@ -2,6 +2,11 @@
 #include <Windows.h>
 //#include "stringapiset.h"
 
+void TextureConverter::LoadWICTextureFromFIle(const std::string& filePath)
+{
+	std::wstring wfilePath = ConvertMultiByteStringToWideString(filePath);
+}
+
 std::wstring TextureConverter::ConvertMultiByteStringToWideString(const std::string& mString)
 {
 	int filePathBufferSize = MultiByteToWideChar(CP_ACP, 0, mString.c_str(), -1, nullptr, 0);
@@ -17,6 +22,6 @@ std::wstring TextureConverter::ConvertMultiByteStringToWideString(const std::str
 void TextureConverter::ConvertTextureWICToDDS(const std::string& filePath)
 {
 
-	LoadWICTextureFromFile(filePath);	
+	LoadWICTextureFromFIle(filePath);	
 
 }

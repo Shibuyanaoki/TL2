@@ -4,20 +4,18 @@ class TextureConverter
 {
 private:
 
+	void LoadWICTextureFromFIle(const std::string& filePath);
+
+
 	std::wstring ConvertMultiByteStringToWideString(const std::string& mString);
-
-
-
-public:
 
 	/// <summary>
 	/// テクスチャをWICからDDSに変換
 	/// </summary>
 	/// <param name="filePath">ファイルパス</param>
-	void ConvertTextureWICToDDS(const std::string& mString);
+	void ConvertTextureWICToDDS(const std::string& filePath);
 
-
-	
+public:
 
 };
 
