@@ -1,6 +1,5 @@
 #include "TextureConverter.h"
 #include <Windows.h>
-//#include "stringapiset.h"
 
 void TextureConverter::LoadWICTextureFromFIle(const std::string& filePath)
 {
