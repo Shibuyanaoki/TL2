@@ -17,8 +17,6 @@ int main(int argc, char * argv[]) {
 
 	assert(argc >= NumArgument);
 
-	//if (argc < NumArgument) return EXIT_FAILURE;
-
 	HRESULT hr = CoInitializeEx(nullptr, COINIT_MULTITHREADED);
 
 	TextureConverter converter;
@@ -28,9 +26,5 @@ int main(int argc, char * argv[]) {
 	system("pause");
 
 	return 0;
-
-	/*CoUninitialize();
-	return EXIT_SUCCESS;*/
-
 
 }
