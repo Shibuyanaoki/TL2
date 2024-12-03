@@ -4,7 +4,7 @@ class TextureConverter
 {
 private:
 
-	void LoadWICTextureFromFIle(const std::string& filePath);
+	void LoadWICTextureFromFile(const std::string& filePath);
 
 
 	std::wstring ConvertMultiByteStringToWideString(const std::string& mString);

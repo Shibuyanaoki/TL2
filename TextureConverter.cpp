@@ -1,7 +1,7 @@
 #include "TextureConverter.h"
 #include <Windows.h>
 
-void TextureConverter::LoadWICTextureFromFIle(const std::string& filePath)
+void TextureConverter::LoadWICTextureFromFile(const std::string& filePath)
 {
 	std::wstring wfilePath = ConvertMultiByteStringToWideString(filePath);
 }
@@ -21,6 +21,6 @@ std::wstring TextureConverter::ConvertMultiByteStringToWideString(const std::str
 void TextureConverter::ConvertTextureWICToDDS(const std::string& filePath)
 {
 
-	LoadWICTextureFromFIle(filePath);	
+	LoadWICTextureFromFile(filePath);	
 
 }
