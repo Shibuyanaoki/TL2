@@ -9,8 +9,6 @@ private:
 
 	std::wstring ConvertMultiByteStringToWideString(const std::string& mString);
 
-
-
 public:
 
 	/// <summary>
