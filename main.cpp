@@ -13,24 +13,19 @@ enum Argument {
 
 };
 
-int main(int argc, char * argv[]) {
+int main(int argc, char* argv[]) {
 
-	//assert(argc >= NumArgument);
-
-	if (argc < NumArgument) return EXIT_FAILURE;
+	assert(argc >= NumArgument);
 
 	HRESULT hr = CoInitializeEx(nullptr, COINIT_MULTITHREADED);
+	assert(SUCCEEDED(hr));
 
 	TextureConverter converter;
 
 	converter.ConvertTextureWICToDDS(argv[kFilePath]);
 
-	/*system("pause");
+	system("pause");
 
-	return 0;*/
-
-	CoUninitialize();
-	return EXIT_SUCCESS;
-
+	return 0;
 
 }
