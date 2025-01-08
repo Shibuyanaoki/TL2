@@ -80,6 +80,21 @@ void TextureConverter::SeparateFilePath(const std::wstring& filePath)
 
 }
 
+void TextureConverter::SaveDDSTextureToFile()
+{
+	// 読み込んだテクスチャをSRGBとして扱う
+	metadata_.format = DirectX::MakeSRGB(metadata_.format);
+
+	HRESULT result;
+
+	// 出力ファイル名を設定する
+	std::wstring filePath = directoryPath_ + fileName_ + L".dds";
+
+	// DDSファイル書き出し
+	result = DirectX::SaveToDDSFile(scratchImage_.GetImages(), scratchImage_.GetImageCount(), metadata_, DDS_FLAGS_NONE, filePath.c_str());
+
+}
+
 void TextureConverter::ConvertTextureWICToDDS(const std::string& filePath)
 {
 
