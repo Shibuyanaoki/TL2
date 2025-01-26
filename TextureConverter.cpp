@@ -91,13 +91,16 @@ void TextureConverter::SaveDDSTextureToFile()
 	std::wstring filePath = directoryPath_ + fileName_ + L".dds";
 
 	// DDSファイル書き出し
-	result = DirectX::SaveToDDSFile(scratchImage_.GetImages(), scratchImage_.GetImageCount(), metadata_, DDS_FLAGS_NONE, filePath.c_str());
+	result = DirectX::SaveToDDSFile(scratchImage_.GetImages(), scratchImage_.GetImageCount(), metadata_, DirectX::DDS_FLAGS::DDS_FLAGS_NONE, filePath.c_str());
 
 }
 
 void TextureConverter::ConvertTextureWICToDDS(const std::string& filePath)
 {
+	// テクスチャファイルを読み込む
+	LoadWICTextureFromFIle(filePath);
 
-	LoadWICTextureFromFIle(filePath);	
+
+	//SaveDDSTextureToFile();
 
 }
