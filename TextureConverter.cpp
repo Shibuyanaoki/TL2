@@ -101,6 +101,6 @@ void TextureConverter::ConvertTextureWICToDDS(const std::string& filePath)
 	LoadWICTextureFromFIle(filePath);
 
 
-	//SaveDDSTextureToFile();
+	SaveDDSTextureToFile();
 
 }
